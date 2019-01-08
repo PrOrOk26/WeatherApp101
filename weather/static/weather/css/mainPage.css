@@ -1,0 +1,19 @@
+.weather-form form {
+    margin:10px auto;
+    width: 250px;
+}
+.weather-form form *{
+    margin: 5px 5px 5px;
+}
+.weather-form form input {
+    margin-right: 0px;
+    margin-left: auto;
+}
+.weather-form form input[type="submit"] {
+    width: 50%;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+.title {
+    text-align: center;
+}

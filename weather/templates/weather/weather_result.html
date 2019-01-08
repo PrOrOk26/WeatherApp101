@@ -1,0 +1,33 @@
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'weather/css/weatherPage.css' %}">
+{% if city_weather.message %}
+    <p> {{ city_weather.message }}</p>
+{% else %}
+    <p class="title"> Current weather data for city {{ city_weather.name }}</p>
+    <div>
+    <table class="weather-data">
+        {% for k, v in city_weather.main.items %}
+            <tr>
+                <th>{{ k }}</th>
+                <td>{{ v }}</td>
+            </tr>
+        {% endfor %}
+        <tr>
+            <th>Wind speed, km</th>
+            <td>{{ city_weather.wind.speed }}</td>
+        </tr>
+        <tr>
+            <th>Clouds, %</th>
+            <td>{{ city_weather.clouds.all }}</td>
+        </tr>
+        {% if city_weather.rain %}
+        {% for k, v in city_weather.rain.items %}
+        <tr>
+            <th>Rain in the last {{ k }}, mm</th>
+            <td>{{ v }}</td>
+        </tr>
+        {% endfor %}
+        {% endif %}
+    </table>
+</div>
+{% endif %}

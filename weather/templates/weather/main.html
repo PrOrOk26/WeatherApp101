@@ -1,0 +1,10 @@
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'weather/css/mainPage.css' %}">
+<p class="title">Welcome to prorok26's Weather Predictor!</p>
+<div class="weather-form">
+    <form action="" method="post">
+        {% csrf_token %}
+        {{ weather_form }}
+        <input type="submit" value="Get my weather!">
+    </form>
+</div>
