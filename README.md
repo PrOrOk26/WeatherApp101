@@ -4,5 +4,8 @@ Feel free to pull requests,address issues or give any feedback on this applicati
 
 Planned features:
 -weather forecasts;
+
 -statistics in a given time period;
+
 -visual tools for representing weather state;
+
